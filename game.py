@@ -105,15 +105,16 @@ def check_enemy_collisions():
                 game_state = GAME_OVER  # Herói morre
 
 def draw_game_over():
-    screen.draw.text("Game Over", center=(WIDTH // 2, HEIGHT // 3), fontsize=60, color=WHITE)
-    screen.draw.text("Press R to Restart", center=(WIDTH // 2, HEIGHT // 2), fontsize=40, color=WHITE)
-    screen.draw.text("Press Q to Quit", center=(WIDTH // 2, HEIGHT // 2 + 50), fontsize=40, color=WHITE)
+    screen.draw.text("Extinto", center=(WIDTH // 2, HEIGHT // 3), fontsize=60, color=WHITE)
+    screen.draw.text("Press R to Reiniciar", center=(WIDTH // 2, HEIGHT // 2), fontsize=40, color=WHITE)
+    screen.draw.text("Pressione X to Sair", center=(WIDTH // 2, HEIGHT // 2 + 50), fontsize=40, color=WHITE)
 
 def draw_menu():
-    screen.draw.text("Platformer Game", center=(WIDTH//2, HEIGHT//4), fontsize=60, color=WHITE)
-    screen.draw.text("Start Game", center=(WIDTH//2, HEIGHT//2), fontsize=40, color=WHITE)
-    screen.draw.text("Toggle Sounds", center=(WIDTH//2, HEIGHT//2 + 50), fontsize=40, color=WHITE)
-    screen.draw.text("Exit", center=(WIDTH//2, HEIGHT//2 + 100), fontsize=40, color=WHITE)
+    screen.draw.text("DinoJump", center=(WIDTH//2, HEIGHT//4), fontsize=60, color=WHITE)
+    screen.draw.text("um clone muito simples de Icy Tower", center=(WIDTH//2, HEIGHT/2.8), fontsize=20, color=WHITE)
+    screen.draw.text("Começar", center=(WIDTH//2, HEIGHT//2), fontsize=40, color=WHITE)
+    screen.draw.text("Música Liga/Desliga", center=(WIDTH//2, HEIGHT//2 + 50), fontsize=40, color=WHITE)
+    screen.draw.text("Sair", center=(WIDTH//2, HEIGHT//2 + 100), fontsize=40, color=WHITE)
 
 def draw_game():
     for platform in platforms:
@@ -155,7 +156,7 @@ def update():
         if keyboard.r:
             generate_new_game()
             game_state = PLAYING
-        elif keyboard.q:
+        elif keyboard.x:
             exit()
 
 def draw():
